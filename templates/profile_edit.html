@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Редактирование профиля</title>
+    <link rel="stylesheet" href="{% static 'css/profile_page.css' %}">
+</head>
+<body>
+    <main>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Сохранить изменения</button>
+        </form>
+    </main>
+</body>
+</html>
+
