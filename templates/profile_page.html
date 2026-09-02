@@ -8,13 +8,19 @@
 </head>
 <body>
     <main>
-        <div class="user_top">
-            <img class="user_pic" src="{{ user.avatar_url }}" alt="Аватар">
-            <div class="user_info">
-                <p>{{ user.username }}</p>
-                <a href="{% url 'profile_edit' %}">Изменить</a>
+        <img class="user_pic" src="{{ user.avatar_url }}" alt="Аватар">
+        <div class="user_info">
+            <div class="info_top">
+                <h2>{{ user.username }}</h2>
+                <a href="{% url 'profile_edit' %}">
+                    <img class="icon" src="{% static 'icons/edit.svg' %}">
+                </a>
             </div>
+             <div class="user_more">
+                <p>{{ user.bio }}</p>
+             </div>
         </div>
+
     </main>
 </body>
 </html>
